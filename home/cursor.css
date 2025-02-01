@@ -1,0 +1,38 @@
+/* Hide default cursor */
+body {
+    cursor: none;
+}
+
+/* Outer Cursor */
+.outer-cursor {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.8s ease-out;
+    z-index: 1000;
+}
+
+/* Inner Cursor */
+.inner-cursor {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease-out;
+    z-index: 1001;
+}
+
+/* Interactive elements hover effect */
+a:hover ~ .outer-cursor, a:hover ~ .inner-cursor,
+h1:hover ~ .outer-cursor, h1:hover ~ .inner-cursor {
+    transform: scale(1.2) translate(-50%, -50%);
+}
+
+

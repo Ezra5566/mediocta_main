@@ -1,0 +1,163 @@
+:root {
+    --color-bg: #91978a;
+    --color-accent: #ab3429;
+    --color-text: #322c26;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Monorama";
+    src: url("https://db.onlinewebfonts.com/t/0d2fc67532a7c000fa3b6d66f0a70103.eot");
+    src: url("https://db.onlinewebfonts.com/t/0d2fc67532a7c000fa3b6d66f0a70103.eot?#iefix") format("embedded-opentype"),
+         url("https://db.onlinewebfonts.com/t/0d2fc67532a7c000fa3b6d66f0a70103.woff2") format("woff2"),
+         url("https://db.onlinewebfonts.com/t/0d2fc67532a7c000fa3b6d66f0a70103.woff") format("woff"),
+         url("https://db.onlinewebfonts.com/t/0d2fc67532 a7c000fa3b6d66f0a70103.ttf") format("truetype"),
+         url("https://db.onlinewebfonts.com/t/0d2fc67532a7c000fa3b6d66f0a70103.svg#Monorama") format("svg");
+}
+
+@font-face {
+    font-family: "Lexa";
+    src: url("./lexa.otf") format("opentype");
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Monorama";
+    background: var(--color-bg);
+}
+
+h2 {
+    font-size: 32px;
+    color: var(--color-accent);
+    margin: 1em 0;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--color-text);
+    margin-bottom: 1em;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 4em;
+}
+
+.logo h1 {
+    font-family: "Lexa";
+    font-size: 80px;
+    color: var(--color-accent);
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+button {
+    position: relative;
+    background: none;
+    outline: none;
+    border: 1px solid var(--color-text);
+    border-radius: 0.25em;
+    font-size: 17px;
+    color: var(--color-text);
+    font-family: "Monorama";
+    padding: 0.25em 0.75em;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+button:hover {
+    color: var(--color-bg);
+}
+
+.sub-nav {
+    padding: 4em;
+    color: var(--color-text);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 2em 4em 4em 4em;
+    display: flex;
+}
+
+footer > div {
+    flex: 1;
+}
+
+.slide-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+.slide-name p {
+    font-size: 42px;
+    padding: 0.5em 0 1.5em 0;
+}
+
+.year p:nth-child(1),
+.role p:nth-child(1),
+.agency p:nth-child(1),
+.awards p:nth-child(1) {
+    margin-bottom: 2em;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-accent);
+    color: var(--color-text);
+    z-index: 10000;
+}
+
+.counter {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    font-size: 40px;
+    padding: 2em;
+}
+
+@media (max-width: 900px) {
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .sub-nav {
+        padding: 2em;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .slide-name p {
+        font-size: 24px;
+    }
+
+    .awards, .agency {
+        display: none;
+    }
+}
